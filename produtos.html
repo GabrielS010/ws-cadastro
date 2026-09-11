@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dashboard para cadastro e listagem de produtos no sistema RFID.">
+  <title>Gestão de Produtos - RFID</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Gestão de Produtos RFID</h1>
+  </header>
+
+  <main>
+    <aside>
+      <p>💡 <strong>Dica:</strong> Aproxime o cartão RFID do leitor para preencher automaticamente o campo de código abaixo.</p>
+    </aside>
+
+    <!-- Aqui o form envia os dados pro backend depois, por enquanto só simula -->
+    <form action="/produtos" method="post">
+      <fieldset>
+        <legend>Novo Produto</legend>
+
+        <div class="input-group">
+          <label for="nome">Nome do Produto</label>
+          <input type="text" id="nome" name="nome" placeholder="Ex: Cadeira Gamer Ergonômica" required>
+        </div>
+
+        <div class="input-group">
+          <label for="rfid">Código RFID</label>
+          <input type="text" id="rfid" name="rfid" placeholder="Aguardando leitura do sensor..." required>
+        </div>
+
+        <div class="input-group">
+          <label for="categoria">Categoria</label>
+          <input type="text" id="categoria" name="categoria" placeholder="Ex: Móveis de Escritório" required>
+        </div>
+
+        <div class="input-group">
+          <label for="preco">Preço (R$)</label>
+          <input type="number" id="preco" name="preco" step="0.01" placeholder="0.00" required>
+        </div>
+
+        <button type="submit">Salvar Produto</button>
+      </fieldset>
+    </form>
+
+    <section>
+      <h2>Produtos Cadastrados</h2>
+      <article>
+        <h3>Produto Exemplo</h3>
+        <p><strong>RFID:</strong> 123456789</p>
+        <p><strong>Categoria:</strong> Eletrônicos</p>
+        <p><strong>Preço:</strong> R$ 199,90</p>
+      </article>
+      <article>
+        <h3>Cadeira Gamer Ergonômica</h3>
+        <p><strong>RFID:</strong> 987654321</p>
+        <p><strong>Categoria:</strong> Móveis de Escritório</p>
+        <p><strong>Preço:</strong> R$ 1.299,90</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Sistema RFID. Todos os direitos reservados. | <a href="login.html">Sair</a></p>
+  </footer>
+</body>
+</html>

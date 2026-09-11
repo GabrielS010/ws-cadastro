@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acesso seguro ao Sistema RFID.">
+  <title>Login - Sistema RFID</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema RFID</h1>
+  </header>
+
+  <main>
+    <form id="form-login">
+      <fieldset>
+        <legend>Acesse sua conta</legend>
+        
+        <div class="input-group">
+          <label for="usuario">Usuário ou Email</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Ex: admin@email.com" required>
+        </div>
+
+        <div class="input-group">
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+        </div>
+
+        <button type="submit">Entrar</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer>
+    <p>Não tem conta? <a href="cadastro-usuario.html">Cadastre-se</a></p>
+  </footer>
+
+  <!-- Script para simular o redirecionamento após o login -->
+  <script>
+    document.getElementById('form-login').addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      window.location.href = 'produtos.html'; // Vai direto pra tela de produtos
+    });
+  </script>
+</body>
+</html>
