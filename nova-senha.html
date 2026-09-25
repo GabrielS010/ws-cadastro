@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Nova Senha</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container-auth">
+        <h2>Definir Nova Senha</h2>
+        <form onsubmit="salvarNovaSenha(event)">
+            <label>Sua Nova Senha:</label>
+            <input type="password" id="nova-senha" required>
+            <label>Confirme a Nova Senha:</label>
+            <input type="password" id="confirma-senha" required>
+            <button type="submit">Salvar Senha</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
